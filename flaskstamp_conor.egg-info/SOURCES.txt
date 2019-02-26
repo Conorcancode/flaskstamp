@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+flaskstamp/__init__.py
+flaskstamp/timestamp.py
+flaskstamp_conor.egg-info/PKG-INFO
+flaskstamp_conor.egg-info/SOURCES.txt
+flaskstamp_conor.egg-info/dependency_links.txt
+flaskstamp_conor.egg-info/not-zip-safe
+flaskstamp_conor.egg-info/requires.txt
+flaskstamp_conor.egg-info/top_level.txt
