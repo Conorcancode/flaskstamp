@@ -1,1 +1,1 @@
-web: gunicorn flaskstamp:create_app()
+web: gunicorn flaskstamp_conor:create_app()
