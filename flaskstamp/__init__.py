@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect
 
 
 def create_app(test_config=None):
@@ -11,7 +11,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def hello():
-        return "Hello World!"
+        return redirect("./api/timestamp/", code=302)
 
     @app.route('/api/timestamp/', defaults={'time': None})
     def timestampNow(time):
