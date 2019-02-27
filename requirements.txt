@@ -3,8 +3,8 @@ attrs==18.2.0
 Click==7.0
 colorama==0.4.1
 Flask==1.0.2
-## !! Could not determine repository location
-flaskstamp==0.0.5
+-e git+https://github.com/Conorcancode/flaskstamp.git@1047e4b559f0650f7f2b58d705992d9d52604bae#egg=flaskstamp_conor
+gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10
 jsonify==0.5
