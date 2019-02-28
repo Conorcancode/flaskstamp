@@ -61,7 +61,7 @@
         <h2>Errors</h2>
         <p>If there is an error, the server will return <code>{"timestamps":{"Error":"Invalid Date"}}</code>. The following are common errors that could have been made.</p>
         <ul>
-            <li>There is not a full YYYY/MM/DD indicated in the request e.g.<code>{{request.base_url}}api/timestamp/31-3</code></li>
+            <li>There is not a full YYYY-MM-DD indicated in the request e.g.<code>{{request.base_url}}api/timestamp/31-3</code></li>
             <li>There are more than 10 digits in the request e.g.<code>{{request.base_url}}api/timestamp/85938493201</code></li>
             <li>The request is neither a string of digits nor a valid UTC timestamp. It may have a character other than "<code>-</code>" in the request.</li>
         </ul>
