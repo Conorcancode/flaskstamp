@@ -13,11 +13,17 @@ def parse(string):
         if(len(date) >= 3 and len(date) <= 5):
             return pastTimeStampUTC(date, timeFormats)
         else:
-            return {'Error': 'Invalid Date'}
+            return {
+                'Error': 'Invalid Date',
+                'Issue': 'Malformed UTC Request'
+            }
     elif(string.isdigit()):
         return pastTimeStampUnix(string, timeFormats)
     else:
-        return {'Error': 'Invalid Date'}
+        return {
+            'Error': 'Invalid Date',
+            'Issue': 'Invalid character in request'
+        }
 
 
 def pastTimeStampUTC(date, timeFormats):
@@ -42,7 +48,10 @@ def pastTimeStampUnix(stringDate, timeFormats):
         return timeFormats
 
     else:
-        return {'Error': 'Invalid Date'}
+        return {
+            'Error': 'Invalid Date',
+            'Issue': 'Length of request must be between 1 and 10 digits'
+        }
 
 def currentTimeStamp(timeFormats):
     timeFormats['utc'] = datetime.datetime.now()

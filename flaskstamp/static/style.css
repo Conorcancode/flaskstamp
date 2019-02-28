@@ -1,0 +1,81 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 1024px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+p, code, span, li, a {
+  font-size: 1.15rem;
+}
+
+h1, h2, p, span, li, a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin: 5vh 0 20px 0;
+}
+
+section {
+  margin: 10px;
+}
+
+code {
+  background-color: #f0f0f0;
+}
+
+.emphasis {
+  font-weight: bold;
+  background-color: #c8ffc8;
+}
+
+li {
+  margin: 10px 0;
+}
+
+#examples .example {
+  margin-bottom: 20px;
+}
+
+#examples .example code, #examples .example span {
+  display: block;
+}
+
+#examples .example code, #examples .example span, #examples .example a {
+  margin-bottom: 10px;
+}
+
+#examples .example a {
+  display: inline-block;
+  font-weight: bold;
+  border: 2px solid #6464ff;
+  color: #6464ff;
+  padding: 2px 5px;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+#examples .example a:hover {
+  background-color: #dcdcff;
+}
+
+#examples .example span {
+  margin: 15px 0;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1024px;
+    margin: auto;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1{
+    font-size:2rem;
+}
+
+h2{
+    font-size: 1.75rem;
+}
+
+p, code, span, li, a{
+    font-size: 1.15rem;
+}
+
+h1, h2, p, span, li, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin: 5vh 0 20px 0;
+}
+
+section{
+    margin: 10px;
+}
+
+code{
+    background-color: rgb(240,240,240);
+}
+
+.emphasis{
+    font-weight: bold;
+    background-color: rgb(200,255,200);
+}
+
+li{
+    margin: 10px 0;
+}
+
+#examples{
+    
+    .example{
+
+        margin-bottom: 20px;
+        code, span{
+            display: block;
+        }
+        code, span, a{
+            margin-bottom: 10px;
+        }
+
+        a{
+            display: inline-block;
+            font-weight: bold;
+            border: 2px solid rgb(100,100,255);
+            color: rgb(100,100,255);
+            padding: 2px 5px;
+            text-decoration: none;
+            margin-bottom: 0;
+            &:hover{
+                background-color: rgb(220,220,255);
+            }
+        }
+
+        span{
+            margin: 15px 0;
+        }
+    }
+}

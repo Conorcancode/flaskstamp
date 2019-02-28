@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlaskStamp - A Flask Based Timestamp Microservice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+    <header>
+        <h1>FlaskStamp - A Flask Based Timestamp Microservice</h1>
+    </header>
+    <section id="howTo">
+        <h2>How it Works</h2>
+        <ol>
+            <li>The API endpoint is requested at the url <code>{{request.base_url}}api/timestamp/</code></li>
+            <li>Upon request, the server will return the current date in UNIX and UTC format as JSON data. <span class="emphasis">NOTE: UTC timestamp is in the GMT timezone.</span></li>
+            <li>An UNIX or UTC timestamp can be appended to the URL to have the server return the UNIX and UTC timestamps at that time. <code>{{request.base_url}}api/timestamp/2011-04-15</code> <span class="emphasis">UTC must use dashes: <code>-</code> to separate year, month and day.</span></li>
+        </ol>
+    </section>
+    <section id="examples">
+        <h2>Examples</h2>
+        <ol>
+            <li>
+                <div class="example">
+                    <code>{{request.base_url}}api/timestamp/</code>
+
+                    <span>returns</span>
+
+                    <code>{"timestamps":{"unix":1551365650.0436215,"utc":"Thu, 28 Feb 2019 14:54:10 GMT"}}</code>
+
+                    <a class="exampleLink" href="{{request.base_url}}api/timestamp/">View</a>
+                </div>
+            </li>
+            <li>
+                <div class="example">
+                    <code>{{request.base_url}}api/timestamp/2011-04-15</code>
+
+                    <span>returns</span>
+
+                    <code>{"timestamps":{"unix":1302825600.0,"utc":"Fri, 15 Apr 2011 00:00:00 GMT"}}</code>
+
+                    <a class="exampleLink" href="{{request.base_url}}api/timestamp/2011-04-15">View</a>
+                </div>
+            </li>
+            <li>
+                <div class="example">
+                    <code>{{request.base_url}}api/timestamp/1489093749</code>
+
+                    <span>returns</span>
+
+                    <code>{"timestamps":{"unix":1489093749,"utc":"Thu, 09 Mar 2017 21:09:09 GMT"}}</code>
+
+                    <a class="exampleLink" href="{{request.base_url}}api/timestamp/2011-04-15">View</a>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <section id="errors">
+        <h2>Errors</h2>
+        <p>If there is an error, the server will return <code>{"timestamps":{"Error":"Invalid Date"}}</code>. The following are common errors that could have been made.</p>
+        <ul>
+            <li>There is not a full YYYY/MM/DD indicated in the request e.g.<code>{{request.base_url}}api/timestamp/31-3</code></li>
+            <li>There are more than 10 digits in the request e.g.<code>{{request.base_url}}api/timestamp/85938493201</code></li>
+            <li>The request is neither a string of digits nor a valid UTC timestamp. It may have a character other than "<code>-</code>" in the request.</li>
+        </ul>
+    </section>
+</body>
+</html>
