@@ -9,6 +9,11 @@ def create_app(test_config=None):
     from . import timestamp
     parse = timestamp.parse
 
+    @app.after_request
+    def addCors(response):
+        response.headers['Access-Control-Allow-Origin'] = 'https://conorcancode.com'
+        return response
+
     @app.route('/')
     def hello():
         return redirect("./api/timestamp/", code=302)
@@ -22,5 +27,6 @@ def create_app(test_config=None):
     def timestamp(time):
         data = parse(time)
         return jsonify({'timestamps': data})
+
 
     return app
